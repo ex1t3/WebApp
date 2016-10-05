@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Chat";
+
+}
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Chat</h2>
+    <hr />
+    <div class="main">
+        <div id="loginBlock">
+           Login:<br />
+            <input id="txtUserName" class="input_text" type="text"/>
+            <br/>
+            <input id="btnLogin" class="button_chat" type="button" value="Enter" />
+        </div>
+        <div id="chatBody">  
+            <div id="header"></div>
+            <div id="inputForm">
+                <input type="text" class="input_text" id="message" />
+                <input type="button" class="button_chat" id="sendmessage" value="Send" />
+            </div>
+            <hr/>
+            <div id="chatroom" сlass="chat_area"></div>
+            <input id="showUsers" class="button_chat" type="button" value="Show users" />
+            <div id="chatusers">
+                <p style="padding-top: 5px;"><b>All users</b>
+                </p>
+                <input id="hdId" type="hidden"/>
+                <input id="userId" type="hidden"/>
+                <input id="username" type="hidden"/>
+            </div>
+        </div>
+        
+    </div>
+
+   
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿@using Pagination.Models
+@model IEnumerable<Pagination.Models.MainMenu>
+<h2>JUST A PAGE</h2>
+
+@helper BuildMenu(IEnumerable<MainMenu> data, int? parentId = null)
+{
+    var items = data.Where(p => p.ParentId == parentId).OrderBy(x => x.Order);
+
+if (items.Any())
+{
+        <ul>
+            @foreach (var item in items)
+            {
+                    
+                <li>
+                    <a href="@item.Url">@item.Header</a>
+                    @BuildMenu(data, item.Id)
+                </li>
+            }
+        </ul>
+}
+}
+
+<div id="cssmenu">
+    @BuildMenu(Model)
+</div>
