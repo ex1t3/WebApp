@@ -6843,27 +6843,18 @@ td.visible-print {
 .chat_area{
     background: #eeeeee;
     border-radius: 5px;    
-    margin-left: 70px;
+    margin-left: 6px;
     overflow: auto;
     font-family: 'Century Gothic', monospace;
     padding: 15px 10px 15px 10px;
     hyphens: manual;
-    width: 40em;
+    width: 39.1em;
 }
-.img_style{
-    background: none;
-    border-radius: 3px;
-    width: 50px;
-    height: 50px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    position: absolute;
-    left: 240px;
-} 
+
 .chat_block{
     background: #ddd;
     border-radius: 5px;
-    width: 45.6em;
+    width: 45.7em;
     text-decoration-color: #ddd;
     word-break: break-word;
     padding-top: 10px;
@@ -6874,4 +6865,14 @@ td.visible-print {
     box-shadow: 0 10px 6px -6px #eeeeee;
 
 }
+.chat_block img {
+    border-radius: 3px;
+    width: 65px;
+    height: 65px;
+    margin-left: 10px;
+}
+.chat_block td {
+    vertical-align: top;
+}
+
 

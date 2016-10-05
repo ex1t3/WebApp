@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Pagination.Hubs;
 using Pagination.Models;
 
 namespace Pagination.Controllers
@@ -15,10 +16,26 @@ namespace Pagination.Controllers
         {
             return View();
         }
-        [HttpGet]
+        
         public ActionResult Chat()
         {
             return View();
+        }
+        [HttpPost]
+        public ActionResult Chat(UserInfo userInfo)
+        {
+            List<UserInfo> list = new List<UserInfo>();
+            list.Add(userInfo);
+            SendMessage("New user has connected!");
+            return RedirectToAction("Chat");
+        }
+        private void SendMessage(string message)
+        {
+            // Получаем контекст хаба
+            var context =
+                Microsoft.AspNet.SignalR.GlobalHost.ConnectionManager.GetHubContext<NotificationHub>();
+            // отправляем сообщение
+            context.Clients.All.displayMessage(message);
         }
 
         public ActionResult Menu()

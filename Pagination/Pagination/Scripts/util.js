@@ -8,9 +8,9 @@
     // function is called by hub
     chat.client.addMessage = function (name, message, imgLink) {
         // adding messages to page
-        $('#chatroom').append('<div class="chat_block"><img class="img_style" src="' +
-            htmlEncode(imgLink) + '"/><div class="chat_area"><b>' + htmlEncode(name)
-            + '</b>: ' + '<i>'+htmlEncode(message) + '</i></div></div>');
+        $('#chatroom').append('<div class="chat_block"><table><tr><td><img src="' +
+            htmlEncode(imgLink) + '"/></td><td><div class="chat_area"><b>' + htmlEncode(name)
+            + '</b>: ' + '<i><br/>'+htmlEncode(message) + '</i></div></td></tr></table></div>');
     };
 
     // function is called while user is connecting
@@ -50,7 +50,19 @@
 
         $('#' + id).remove();
     }
+   /* $(function () {
 
+        var notificationhub = $.connection.notificationHub;
+
+        notificationhub.client.displayMessage = function (message) {
+
+            $('#notification').html(message);
+        };
+
+        $.connection.hub.start();
+
+    });
+    */
     // openning connection
     $.connection.hub.start().done(function () {
 
