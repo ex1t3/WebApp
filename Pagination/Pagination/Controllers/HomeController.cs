@@ -21,7 +21,12 @@ namespace Pagination.Controllers
         {
             return View();
         }
-        [HttpPost]
+
+        public ActionResult Method()
+        {
+            return View();
+        }
+       /* [HttpPost]
         public ActionResult Chat(UserInfo userInfo)
         {
             List<UserInfo> list = new List<UserInfo>();
@@ -29,6 +34,7 @@ namespace Pagination.Controllers
             SendMessage("New user has connected!");
             return RedirectToAction("Chat");
         }
+        */
         private void SendMessage(string message)
         {
             // Получаем контекст хаба

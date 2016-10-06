@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Method";
+}
+
+<h2>Method</h2>
+
+<input type="text" id="message" onkeypress="runScript(event)"></input>
+<input type="text" id="mas"></input>
+
+
+<script>
+    function runScript(e) {
+        if (e.keyCode == 13) {
+            var tb = document.getElementById("message");
+            eval(tb.value);
+            $("#mas").val('adadad');
+            return false;
+        }
+    }
+</script>

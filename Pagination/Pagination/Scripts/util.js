@@ -73,9 +73,10 @@
                 chat.server.send($('#username').val(), $('#message').val());
                 $('#message').val('');
             } else {
-                alert("Type message, please!")
+                alert("Type message, please!");
             }
         });
+
         // login processing
         $("#btnLogin").click(function () {
 
@@ -87,6 +88,7 @@
                 alert("Type your name!");
             }
         });
+
     });
 });
 // tags codying
