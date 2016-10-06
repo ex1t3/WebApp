@@ -6813,11 +6813,13 @@ td.visible-print {
 }
 /*BUTTON FOR CHAT*/
 .button_chat {
-    background-color: white;
+    background-color: rgba(66, 139, 202, 0.56);
     padding-top: 2px;
     margin-top: 10px;
     border-radius: 4px;
-    color: black;
+    font-style: inherit;
+    font-size: 15px;
+    color: white;
     border: 2px solid rgba(66, 139, 202, 0.56);
 }
 .button_chat:active {
@@ -6827,11 +6829,18 @@ td.visible-print {
 }
 .button_chat:hover {
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.075);
+    background-color: rgba(66, 139, 202, 0.70);
     -webkit-box-shadow: 0 0 6px #fff0f5;
 }
+.button_chat:active {
+    border-radius: 10px;
+    background-color: rgba(66, 139, 202, 0.76);
+    box-shadow: -13px;
+}
+
 .input_text {
     border-radius: 3px;
+    font-family: 'Segoe UI';
 }
 .input_text:focus
 {
@@ -6845,7 +6854,7 @@ td.visible-print {
     border-radius: 5px;    
     margin-left: 6px;
     overflow: auto;
-    font-family: 'Century Gothic', monospace;
+    font-family: 'Segoe UI', monospace;
     padding: 15px 10px 15px 10px;
     hyphens: manual;
     width: 39.1em;
