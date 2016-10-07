@@ -3785,6 +3785,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+    font-family: 'Segoe UI';
 }
 
 .nav:before,
@@ -4193,6 +4194,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
+    font-family: 'Segoe UI';
 }
 
 .navbar-brand:hover,
@@ -4243,6 +4245,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
+    
 }
 
 @media (max-width: 767px) {
@@ -4508,8 +4511,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #ffffff;
+  color: rgba(30,144,255,0.80);
   background-color: transparent;
+
 }
 
 .navbar-inverse .navbar-text {
@@ -4522,7 +4526,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #ffffff;
+  color: rgba(30,144,255,0.80);
+    padding-top: 13px;
   background-color: transparent;
 }
 
@@ -6884,4 +6889,12 @@ td.visible-print {
     vertical-align: top;
 }
 
+.navbar-nav-border {
+ background: none;
+}
 
+.navbar-nav-border:hover {
+    border: 1px;
+    border-color: whitesmoke;
+    border-radius: 3px;
+}
